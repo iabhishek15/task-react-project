@@ -92,7 +92,7 @@ function App() {
   } 
 
   return (
-    <div className='app'>
+    <Router>
       <div className="container">
         <Header title={"Task Tracker"} 
         onAdd={() => setShowAddTask(!showAddTask)}
@@ -111,7 +111,7 @@ function App() {
         {/* <Route path="/about" components={About} /> */}
         <Footer />    
       </div> 
-    </div> 
+    </Router> 
   );
 } 
 

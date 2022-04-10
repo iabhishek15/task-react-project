@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom'
 import Buttons from './Buttons'
 
 const Header = ({title, onAdd, showAdd}) => {
-    const location = useLocation;
+    const location = useLocation()
 
-    const onClick = () => {
-        console.log('button clicked!')
-    }
+    // const onClick = () => {
+    //     console.log('button clicked!')
+    // }
     return (
       <header className="header">
           {/* <h1 style={{color: 'red', backgroundColor:'black'}}>{title}</h1>
@@ -16,11 +16,11 @@ const Header = ({title, onAdd, showAdd}) => {
           {/* <Buttons color="green" text='hello'/>
           <Buttons color="red" text='world'/> */}
           {location.pathname === '/' && (
-          <Buttons color="green" text='Add' 
-          onClick={onAdd} 
-          text={showAdd?'Close':'Add'}
-          color={showAdd?'red':'green'} 
-          />)}    
+            <Buttons 
+            onClick={onAdd} 
+            text={showAdd?'Close':'Add'}
+            color={showAdd?'red':'green'} 
+            />)}    
       </header>
     )
   }
